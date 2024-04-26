@@ -1,0 +1,527 @@
+* {
+  /* Código para resetar o CSS do HTML */
+    margin: 0;
+    padding: 0;
+  /* Deixar a cor do texto de toda a página em branco */
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* ESTILOS EM TAGS */
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #19142a;
+}
+
+nav {
+  font: top;
+}
+
+header { /* !!! VER COM PROFESSOR COMO FAZER COM QUE O HEADER AUMENTE AO IR PRA MOBILE !!! */
+  background-color: #19142a;
+  position: fixed;
+  width: 100vw;
+  padding: 60px 50px 10px 50px; /* cima, direita, baixo, esquer */
+  z-index: 3; /* Define a ordem de exibição (o que vai na frente e atrás). Só aplica em elementos com POSITION definido diferente de STATIC (que é o padrão) */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ESTILIZAÇÃO GLOBAL */
+/* Texto */
+p{
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: algerian;
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 12px;
+}
+
+/* Atributo de espaçamento acima (texto) */ 
+.espacima{
+  padding-top: 20px;
+}
+
+/* Container Global */
+.head-main-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* CLASSES >>HEADER<< */
+header > img {
+  position: fixed;
+  top: 10px;
+  left: 5%;
+  width: 50px;
+}
+
+nav > a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.header-item-1 {
+  position: fixed; /* declarando que a posição do atributo é fixa, ela não mexe */
+  top: 20px; /* aqui defini-se o espaçamento do topo para a posição declara acima referente à viewport */
+  right: 50px; /* aqui defini-se o espaçamento da direita para a posição declara acima referente à viewport */
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-left: 10%;
+}
+
+/* CLASSES >>MAIN<< */
+.bgimg{
+  background-image: url("./images/image_processing20210405-14020-pgoxnr.gif");
+  background-position: center center;
+  background-size: cover;
+  padding-top: 20%;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+
+.relativebody {
+  position: relative; /* para ativar seu deslocamento */
+  top: 90vh; /* aqui definimos que ele será deslocado 85% do h da viewport para baixo, esse espaçamento NÃO PODE ser preenchido por outra coisa */
+  width: 100vw;
+}
+
+.main-item-1 {
+  display: flex;
+  position: relative; /* Muito importante esse RELATIVE como tag PAI para os position-absolute das TAG FILHO (como a foto de perfil e o elemento que vai atrás) fique encaixado perfeitamente relativo a ESTA DIV. Logo, sempre que uma DIV tem um elemento, muito importante usar POSITION RELATIVE na tag PAI e Absolute nas Filhas */
+  background-color: #19142a;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 65vh;
+  min-height: 450px;
+  gap: 5%;
+  padding: 0px 5%;
+}
+
+.main-item-1-textapres {
+  background:rgba(213, 33, 58, 0.6);
+  border-top-left-radius: 30px;
+  padding: 10px 5% 10px 5%; /* cima, direita, baixo, esquer */
+  align-self: center;
+}
+
+.main-item-1 > div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.imgperfil {
+  width: 350px;
+  align-self: center; /* funcionou porque ativamos flex na tag pai */
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  z-index: 2;
+}
+
+.el-lateral {
+  position: absolute;
+  z-index: 1;
+  clip-path: polygon(0 0, 70% 0%, 70% 100%, 0% 100%);
+  right: -25px;
+  bottom: -80px;
+  width: 100px;
+}
+
+.el-bolona {
+  width: 300px;
+  position: absolute;
+  bottom: 20px;
+  right: 15%;
+  z-index: 1;
+}
+
+.el-bolona-transp {
+  width: 320px;
+  opacity: 0.3;
+  border-style: dashed;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100px;
+  right: 10%;
+  z-index: 0;
+}
+
+.el-bolinhas {
+  width: 120px;
+  opacity: 0.1;
+  position: absolute;
+  bottom: 70%;
+  right: 32%;
+}
+
+.main-item-2 {
+  position: relative;
+  background-color: #2a2344;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 60px 5%;
+}
+
+.main-item-2 > img {
+  position: absolute;
+  z-index: 1;
+  clip-path: polygon(0 0, 70% 0%, 70% 100%, 0% 100%);
+  left: -25px;
+  bottom: -80px;
+  width: 100px;
+}
+
+.main-item-2 > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+  padding: 60px 5%;
+}
+
+.main-item-2 > div > a {
+  position: relative;
+  border-style: dashed;
+  border-width: 3px 1px 1px 3px;
+  border-color: #d5213a;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 350px;
+  border-top-left-radius: 30px;
+  padding: 50px 70px;
+}
+
+.main-item-2 > div > a > img {
+  position: absolute;
+  width: 60px;
+  left: 40px;
+  top: -30px;
+
+}
+
+.main-item-2 > div > a > h3 {
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.main-item-2 > div > a > p {
+  font-size: 15px;
+  font-weight: lighter;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.main-item-3 {
+  background-color: #19142a;
+  padding: 120px 5%; /* topo e baixo, laterais */
+}
+
+.main-item-3-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+  padding-top: 30px;
+}
+
+.main-item-3-gallery > iframe {
+  height: 635px;
+  width: 500px;
+  border-radius: 5px;
+  border: 0;
+}
+
+.main-item-3-gallery-fotos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+  margin: 5px;
+  min-width: 620px;
+  flex: 1;
+  padding-left: 20px;
+}
+
+.main-item-3-gallery-fotos > a {
+  width: 300px;
+  height: 300px;
+}
+
+.main-item-3-gallery-fotos > a > img {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.main-item-3-gallery-fotos > a > img:hover {
+  box-shadow: 0 0 6px 4px #d5213a;
+}
+
+.main-item-3-gallery > iframe:hover {
+  box-shadow: 0 0 6px 4px #d5213a;
+}
+
+.main-item-4 {
+  position: relative;
+  background-color: #2a2344;
+  padding: 60px 5%; /* topo e baixo, laterais */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main-item-4 > img {
+  position: absolute;
+  z-index: 1;
+  clip-path: polygon(0 0, 70% 0%, 70% 100%, 0% 100%);
+  right: -25px;
+  bottom: -80px;
+  width: 100px;
+}
+
+.main-item-4 > section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 35px;
+}
+
+.main-item-4 > section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+  position: relative;
+  height: 200px;
+  width: 230px;
+  padding: 20px 20px 30px 50px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  background:rgba(213, 33, 58, 0.6);
+  border-top-left-radius: 30px;
+}
+
+.main-item-4 > section > div > h1 {
+  font-size: 20px;
+  margin-top: 15px;
+  position: absolute;
+  top: 230px;
+  
+  align-self: center;
+  z-index: 2;
+}
+
+.main-item-4 > section > div > h2 {
+  font-weight: bolder;
+  font-family: arial;
+  font-size: 40px;
+  color: #2a2344;
+  margin-bottom: 8px;
+}
+
+.el-seta {
+  height: 45px;
+  width: 325px;
+  position: absolute;
+  left: 0px;
+  top: 235px;
+}
+
+.el-bolatraco {
+  position: absolute;
+  left: 5px;
+  top: 18px;
+}
+
+.main-item-5 {
+  position: relative;
+  background-color: #19142a;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 120px 5%; /* topo e baixo, laterais */
+}
+
+.main-item-5 > img {
+  position: absolute;
+  left: -40px;
+  top: 500px;
+  width: 100px;
+}
+
+.main-item-5-contact {
+  background-color: #19142a;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  min-width: 400px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.main-item-5-contact > div {
+  background-color: #19142a;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0px;
+}
+
+.cabecalhocontato {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.main-item-5-contact > div > a {
+  text-decoration: none;
+  padding: 8px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+.main-item-5-contact > div > a > img {
+  width: 60px;
+}
+
+.main-item-5-contact > div > a > div {
+  font-size: 15px;
+  color: rgb(61, 61, 61);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-item-5-contact > div > a > div > h2 {
+  font-size: 18px;
+  color: rgb(61, 61, 61);
+  text-decoration: none;
+}
+
+.main-item-5-contact > div > a > div > p {
+  font-size: 25px;
+  color: rgb(204, 204, 204);
+  text-decoration: none;
+}
+
+.main-item-5-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-item-5-form > div > form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50vw;
+  min-width: 500px;
+  gap: 20px 10px;
+  padding: 25px 0px;
+}
+
+.main-item-5-form > div > form > input {
+  width: 44%;
+  min-width: 100px;
+  border-style: solid;
+  border-radius: 10px;
+  height: 50px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.main-item-5-form > div > form > textarea {
+  min-width: 93%;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.main-item-5-form > div > form > input[type="submit"] {
+  border-style: none;
+  background-color: #d5213a;
+  width: 150px;
+}
+
+.main-item-5-form > div > form > input[type="reset"] {
+  border-style: none;
+  background-color: #d5213a;
+  width: 150px;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #2a2344;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid rgb(68, 68, 68);
+}
+
+footer > p {
+  font-family: arial;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .side-bar {
+      display: none;
+  }
+} 
+
+/* ABA REFERÊNCIAS */
+.bodyref {
+  padding: 2%;
+}
+
+.main-ref {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+.refs {
+  background-color: #d5213a;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  min-width: 300px;
+  max-width: 400px;
+  width: 30%;
+  border-radius: 5px;
+  padding: 10px;
+  gap: 5px;
+}
+.refs > img {
+  width: 100px;
+  border-radius: 5px;
+  float: left;
+}
